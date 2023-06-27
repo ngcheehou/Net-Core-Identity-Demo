@@ -163,6 +163,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.8, )"
+            },
+            "QRCoder": {
+              "target": "Package",
+              "version": "[1.4.1, )"
+            },
+            "itext7": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             }
           },
           "imports": [

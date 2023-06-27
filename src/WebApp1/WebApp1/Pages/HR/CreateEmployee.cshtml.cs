@@ -1,4 +1,4 @@
-using DataLibrary.Identity;
+using DataLibrary;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -8,19 +8,19 @@ using System.Drawing;
 using QRCoder;
 using Image = iText.Layout.Element.Image;
 
-namespace WebApp.Pages.HR
+namespace WebApp1.Pages.HR
 {
     public class CreateEmployeeModel : PageModel
     {
-        private readonly UserManager<MyEmployee> _userManager;
-        private readonly SignInManager<MyEmployee> _signInManager;
-        private readonly RoleManager<MyDepartment> _roleManager;
+        private readonly UserManager<IdentityUser> _userManager;
+        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
         private readonly UrlEncoder _urlEncoder;
 
         private readonly IWebHostEnvironment _env;
         public string qrCodeImageBase64 { get; set; }
-        public CreateEmployeeModel(UserManager<IdentityUser> userManager, RoleManager<MyDepartment> rolemanager,
-            SignInManager<MyEmployee> signInManager, UrlEncoder urlencoder, IWebHostEnvironment env)
+        public CreateEmployeeModel(UserManager<IdentityUser> userManager, RoleManager<IdentityRole> rolemanager,
+            SignInManager<IdentityUser> signInManager, UrlEncoder urlencoder, IWebHostEnvironment env)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -73,7 +73,7 @@ namespace WebApp.Pages.HR
 
             if (ModelState.IsValid)
             {
-                var user = new MyEmployee { UserName = Input.UserName };
+                var user = new IdentityUser { UserName = Input.UserName };
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
 
@@ -130,7 +130,7 @@ namespace WebApp.Pages.HR
 
        
 
-        private async Task<string> LoadSharedKeyAndQrCodeUriAsync(MyEmployee user)
+        private async Task<string> LoadSharedKeyAndQrCodeUriAsync(IdentityUser user)
         {
             // Load the authenticator key & QR code URI to display on the form
             var unformattedKey = await _userManager.GetAuthenticatorKeyAsync(user);

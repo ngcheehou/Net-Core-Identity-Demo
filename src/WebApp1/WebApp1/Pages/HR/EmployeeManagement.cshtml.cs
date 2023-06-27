@@ -1,11 +1,11 @@
-using DataLibrary;
+ 
 
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace WebApp.Pages.HR
+namespace WebApp1.Pages.HR
 {
     public class EmployeeManagementModel : PageModel
     {

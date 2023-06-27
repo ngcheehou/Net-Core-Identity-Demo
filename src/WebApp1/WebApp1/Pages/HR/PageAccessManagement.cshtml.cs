@@ -8,7 +8,7 @@ using WebApp1.Constant;
 using System.Security.Claims;
 using System.Data;
 
-namespace WebApp.Pages.HR
+namespace WebApp1.Pages.HR
 {
     public class PageAccessManagementModel : PageModel
     {

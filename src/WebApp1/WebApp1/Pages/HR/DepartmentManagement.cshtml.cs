@@ -1,18 +1,17 @@
-using DataLibrary.Identity;
-using DataLibrary;
+
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace WebApp.Pages.HR
+namespace WebApp1.Pages.HR
 {
     public class DepartmentManagementModel : PageModel
     {
         
-        private readonly UserManager<MyEmployee> _userManager;
-        private readonly RoleManager<MyDepartment> _roleManager;
+        private readonly UserManager<IdentityUser> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
 
-        public DepartmentManagementModel( UserManager<MyEmployee> usermanager, RoleManager<MyDepartment> rolemanager)
+        public DepartmentManagementModel( UserManager<IdentityUser> usermanager, RoleManager<IdentityRole> rolemanager)
         {
            
             _userManager = usermanager;
@@ -21,7 +20,7 @@ namespace WebApp.Pages.HR
 
 
         [BindProperty]
-        public MyDepartment MyDepartment { get; set; }
+        public IdentityRole IdentityRole { get; set; }
 
         public async Task<IActionResult> OnPostAsync()
         {
@@ -34,20 +33,20 @@ namespace WebApp.Pages.HR
             }
 
 
-            if (await _roleManager.RoleExistsAsync(this.MyDepartment.NormalizedName))
+            if (await _roleManager.RoleExistsAsync(this.IdentityRole.NormalizedName))
             {
                 ModelState.AddModelError("", "Name is exists.");
 
                 return base.Page();
             }
 
-            MyDepartment MyDepartment = new MyDepartment();
+            IdentityRole IdentityRole = new IdentityRole();
 
 
-            MyDepartment.Name = this.MyDepartment.NormalizedName;
-            MyDepartment.NormalizedName = this.MyDepartment.NormalizedName;
+            IdentityRole.Name = this.IdentityRole.NormalizedName;
+            IdentityRole.NormalizedName = this.IdentityRole.NormalizedName;
 
-            await _roleManager.CreateAsync(MyDepartment);
+            await _roleManager.CreateAsync(IdentityRole);
 
             TempData["Success"] = "true";// ViewData to trigger the update successful modal.
             return RedirectToPage("./DepartmentManagement");

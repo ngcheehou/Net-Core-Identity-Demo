@@ -1,4 +1,4 @@
-using DataLibrary.Identity;
+
 using iText.IO.Image;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -9,11 +9,11 @@ using System.Drawing;
 using System.Security.Cryptography;
 using System.Text.Encodings.Web;
 
-namespace WebApp.Pages.HR
+namespace WebApp1.Pages.HR
 {
     public class ResetEmployeeModel : PageModel
     {
-        private readonly UserManager<MyEmployee> _userManager;
+        private readonly UserManager<IdentityUser> _userManager;
 
         private readonly IWebHostEnvironment _env;
 
@@ -24,7 +24,7 @@ namespace WebApp.Pages.HR
 
         [BindProperty(SupportsGet = true)]
         public string? SelectedEmployeeID { get; set; }//user select
-        public ResetEmployeeModel(UserManager<MyEmployee> usermanager, IWebHostEnvironment env, UrlEncoder urlencoder)
+        public ResetEmployeeModel(UserManager<IdentityUser> usermanager, IWebHostEnvironment env, UrlEncoder urlencoder)
         {
             _userManager = usermanager;
             _urlEncoder = urlencoder;
@@ -106,7 +106,7 @@ namespace WebApp.Pages.HR
 
 
 
-        private async Task<string> LoadSharedKeyAndQrCodeUriAsync(MyEmployee user)
+        private async Task<string> LoadSharedKeyAndQrCodeUriAsync(IdentityUser user)
         {
             // Load the authenticator key & QR code URI to display on the form
             var unformattedKey = await _userManager.GetAuthenticatorKeyAsync(user);
