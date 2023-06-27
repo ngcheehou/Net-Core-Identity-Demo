@@ -19,7 +19,7 @@ namespace WebApp.Pages.HR
 
         private readonly IWebHostEnvironment _env;
         public string qrCodeImageBase64 { get; set; }
-        public CreateEmployeeModel(UserManager<MyEmployee> userManager, RoleManager<MyDepartment> rolemanager,
+        public CreateEmployeeModel(UserManager<IdentityUser> userManager, RoleManager<MyDepartment> rolemanager,
             SignInManager<MyEmployee> signInManager, UrlEncoder urlencoder, IWebHostEnvironment env)
         {
             _userManager = userManager;
