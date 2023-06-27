@@ -1,0 +1,101 @@
+﻿@page
+@model WebApp.Pages.HR.CreateEmployeeModel
+@{
+}
+
+
+
+<div id="successDialog" class="alert alert-success" style="display: none;">
+    Create new employee success!
+</div>
+
+<h2>Create Employee</h2>
+<form method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="mb-3">
+        <label asp-for="Input.UserName" class="form-label"></label>
+        <input asp-for="Input.UserName" class="form-control" />
+        <span asp-validation-for="Input.UserName" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Input.Password" class="form-label"></label>
+        <input asp-for="Input.Password" class="form-control" type="password" />
+        <span asp-validation-for="Input.Password" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Input.ConfirmPassword" class="form-label"></label>
+        <input asp-for="Input.ConfirmPassword" class="form-control" type="password" />
+        <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label for="department" class="form-label">Department:</label>
+        <select asp-for="DepartmentID" asp-items="@Model.DepartmentOptions" class="form-control">
+            <option value="">None Selected</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label class="form-check-label">
+            <input type="checkbox" asp-for="IsMFAChecked" class="form-check-input" /> Is MFA User?
+        </label>
+    </div>
+
+  
+
+
+    <button type="submit" class="btn btn-primary mt-3">Create</button>
+</form>
+
+<div id="qrcodeContainer" class="mb-3" style="display: none;">
+    <h4>Please Scan this QR Code to register your Two FA</h4>
+
+    <img id="qrcode" src="~/QRImage/qr.jpg" alt="QR Code" style="width:20%; height:20%" />
+
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+
+<script type="text/javascript">
+    $(function () {
+        var success = '@(TempData["Success"] ?? "false")';
+
+        if (success === "true") {
+           
+            // Show the success dialog
+            $('#successDialog').show();
+
+            // Wait for 1 second (1000 milliseconds)
+            setTimeout(function () {
+                // Hide the success dialog
+                $('#successDialog').hide();
+
+               
+            }, 2000);
+        }
+    });
+
+
+    $(function () {
+        var QRCodesuccess = '@(TempData["QRCode"] ?? "false")';
+
+        if (QRCodesuccess === "true") {
+
+            // Show the success dialog
+            $('#qrcodeContainer').show();
+
+            // Wait for 1 second (1000 milliseconds)
+            setTimeout(function () {
+                // Hide the success dialog
+                $('#qrcodeContainer').hide();
+
+                // Reload the page after 1 minute
+                location.reload();
+            }, 60000);
+        }
+    });
+     
+
+</script>
