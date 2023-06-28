@@ -15,6 +15,7 @@ builder.Services.AddDbContext<MyDbContext>(options =>
 
 builder.Services.ConfigureApplicationCookie(options =>
 {
+    options.LoginPath = "/Identity/Account/Login";  
     options.AccessDeniedPath = "/Identity/AccessDenied";
 });
 
