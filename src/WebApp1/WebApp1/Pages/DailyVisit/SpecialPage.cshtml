@@ -1,0 +1,27 @@
+﻿@page
+@model WebApp1.Pages.DailyVisit.SpecialPageModel
+
+@using Microsoft.AspNetCore.Authorization
+@using WebApp1.Constant;
+@inject IAuthorizationService AuthorizationService
+@{
+}
+
+
+<h1>Important Document</h1>
+
+<p>@Model.DocumentContent</p>
+
+
+
+
+<AuthorizeView Policy=@SpecialActionConst.CanViewDocument>
+    <h3>You can see me means you have the claims for Can View document</h3>
+</AuthorizeView>
+
+<AuthorizeView Policy=@SpecialActionConst.CanEditDocument>
+    <h3>You can see me means you have the claims for Can Edit document</h3>
+    <form method="post">
+        <input type="submit" value="Edit Document" />
+    </form>
+</AuthorizeView>

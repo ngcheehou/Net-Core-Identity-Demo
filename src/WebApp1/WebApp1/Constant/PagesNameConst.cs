@@ -13,5 +13,9 @@
         public const string TopSecret = "Top Secret";
 
         public const string HR = "HR Pages";
+
+        public const string Special = "Special Pages";
+
+        public const string SpecialActionManagement = "Special Action Management Pages";
     }
 }
