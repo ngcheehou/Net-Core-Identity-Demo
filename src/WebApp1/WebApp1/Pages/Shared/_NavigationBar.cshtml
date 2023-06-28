@@ -17,20 +17,24 @@
 <div class="list-group">
 
     @{
-        if (User.HasClaim(x => x.Type == Constant.PagesNameConst.IT))
-        {
+        //if (User.HasClaim(x => x.Type == Constant.PagesNameConst.IT))
+        //{
             <a href="/DailyVisit/InformationTechnology" class="list-group-item list-group-item-action">
                 Information Technology Page
             </a>
-        }
-        if (User.HasClaim(x => x.Type == Constant.PagesNameConst.IT))
-        {
+        //}
+        //if (User.HasClaim(x => x.Type == Constant.PagesNameConst.IT))
+        //{
             <a href="/DailyVisit/SalesReport" class="list-group-item list-group-item-action">
                 Sales Report Page
         </a>
-        }
+        //}
         <a href="/DailyVisit/TopSecretCEOOnly" class="list-group-item list-group-item-action">
             Top Secret Page
+        </a>
+
+        <a href="/DailyVisit/SpecialPage" class="list-group-item list-group-item-action">
+            Special Page Page
         </a>
 
         <div class="list-group-item list-group-item-action" data-bs-toggle="collapse" data-bs-target="#hrSubmenu" aria-expanded="false">
@@ -51,6 +55,9 @@
             </a>
             <a href="/HR/PageAccessManagement" class="list-group-item list-group-item-action">
                 Page Access Management Page
+            </a>
+            <a href="/HR/SpecialActionManagement" class="list-group-item list-group-item-action">
+                Special Action Management Page
             </a>
 
         </div>

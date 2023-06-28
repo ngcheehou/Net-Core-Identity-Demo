@@ -5,7 +5,7 @@ using WebApp1.Constant;
 
 namespace WebApp1.Pages.DailyVisit
 {
- 
+    [Authorize(Policy = PagesNameConst.Special)]
     public class SpecialPageModel : PageModel
     {
         public string DocumentContent { get; set; }

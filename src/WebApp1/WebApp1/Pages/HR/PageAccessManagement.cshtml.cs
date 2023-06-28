@@ -12,7 +12,7 @@ namespace WebApp1.Pages.HR
     {
 
         private readonly RoleManager<IdentityRole> _roleManager;
-        private readonly UserManager<IdentityUser> _userManager;
+       
 
 
 
@@ -37,7 +37,7 @@ namespace WebApp1.Pages.HR
         {
 
             _roleManager = rolemanager;
-            _userManager = usermanager;
+          
 
         }
         public IList<SelectListItem>? DepartmentOptions { get; set; }
@@ -113,7 +113,7 @@ namespace WebApp1.Pages.HR
                     }
                     else
                     {
-                        ModelState.AddModelError("", "group is invalid.");
+                        ModelState.AddModelError("", "department selected is invalid.");
                     }
                 }
             }
