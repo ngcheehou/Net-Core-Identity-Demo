@@ -11,20 +11,16 @@
 <h1>Important Document</h1>
  
 
+@if(Model.CanViewDocument)
+{
+<h3>You can see me means you have the claims for <span style="color:orange;">Can View document</span></h3>
+}
 
-
-
-<AuthorizeView Policy=@SpecialActionConst.CanViewDocument>
-    <h3>
-        You can see me means you have the claims for <span style="color:orange;">Can View document</span>
-    </h3>
-</AuthorizeView>
-
-
-<AuthorizeView Policy=@SpecialActionConst.CanEditDocument>
+@if (Model.CanEditDocument)
+{
     <h3>You can see me means you have the claims for <span style="color: green;">Can Edit document</span></h3>
 
     <form method="post">
         <input type="submit" value="Edit Document" />
     </form>
-</AuthorizeView>
+}

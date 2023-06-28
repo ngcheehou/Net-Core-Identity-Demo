@@ -39,8 +39,13 @@ namespace WebApp1.Constant
             options.AddPolicy(PagesNameConst.TopSecret,
               policy => policy.RequireClaim(PagesNameConst.TopSecret, "Yes"));
 
-               options.AddPolicy(PagesNameConst.SpecialActionManagement,
-              policy => policy.RequireClaim(PagesNameConst.SpecialActionManagement, "Yes"));
+            options.AddPolicy(PagesNameConst.SpecialActionManagement,
+           policy => policy.RequireClaim(PagesNameConst.SpecialActionManagement, "Yes"));
+
+
+
+            options.AddPolicy(PagesNameConst.Special,
+              policy => policy.RequireClaim(PagesNameConst.Special, "Yes"));
 
             options.AddPolicy(SpecialActionConst.CanViewDocument,
               policy => policy.RequireClaim(SpecialActionConst.CanViewDocument, "Yes"));   
