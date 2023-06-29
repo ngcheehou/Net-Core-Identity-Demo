@@ -1,6 +1,6 @@
 ﻿namespace WebApp1.Constant
 {
-    public class SpecialActionConst
+    public class DemoUserClaimConst
     {
         public const string CanViewDocument = "CanViewDocument";
 

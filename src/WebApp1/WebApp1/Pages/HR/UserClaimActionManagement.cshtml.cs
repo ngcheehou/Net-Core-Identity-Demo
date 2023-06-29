@@ -8,11 +8,11 @@ using static WebApp1.Pages.HR.PageAccessManagementModel;
 
 namespace WebApp1.Pages.HR
 {
-    public class SpecialActionManagementModel : PageModel
+    public class UserClaimActionManagementModel : PageModel
     {
       
 
-        public SpecialActionManagementModel(UserManager<IdentityUser> usermanager)
+        public UserClaimActionManagementModel(UserManager<IdentityUser> usermanager)
         {
             _userManager = usermanager;
         }
@@ -57,7 +57,7 @@ namespace WebApp1.Pages.HR
             }
 
 
-            foreach (var function in SpecialActionDictionary.Instance)
+            foreach (var function in DemoUserClaimDictionary.Instance)
             {
                 PersonalActionName.Add(new PersonalActionModel
                 {
@@ -102,7 +102,7 @@ namespace WebApp1.Pages.HR
 
                         }
                         TempData["Success"] = "true";// ViewData to trigger the update successful modal.
-                        return RedirectToPage("./SpecialActionManagement");
+                        return RedirectToPage("./UserClaimActionManagement");
                     }
                     else
                     {

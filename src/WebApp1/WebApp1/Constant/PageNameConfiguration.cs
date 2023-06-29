@@ -13,11 +13,11 @@ namespace WebApp1.Constant
             PageNameDictionary.Instance.Add("Manage Department Access Page", PagesNameConst.ManageDepartment);
             PageNameDictionary.Instance.Add("Top Secret Page", PagesNameConst.TopSecret);
             PageNameDictionary.Instance.Add("HR Pages", PagesNameConst.HR);
-            PageNameDictionary.Instance.Add("Special Page", PagesNameConst.Special); 
-            PageNameDictionary.Instance.Add("Special Action Management Page", PagesNameConst.SpecialActionManagement);
+            PageNameDictionary.Instance.Add("User Claim Demo Page", PagesNameConst.UserClaimDemo); 
+            PageNameDictionary.Instance.Add("User Claim Action Demo Management", PagesNameConst.UserClaimActionDemoManagement);
 
-            SpecialActionDictionary.Instance.Add("Can View Document", SpecialActionConst.CanViewDocument);
-            SpecialActionDictionary.Instance.Add("Can Edit Document", SpecialActionConst.CanEditDocument);
+            DemoUserClaimDictionary.Instance.Add("Can View Document", DemoUserClaimConst.CanViewDocument);
+            DemoUserClaimDictionary.Instance.Add("Can Edit Document", DemoUserClaimConst.CanEditDocument);
             return services;
         }
 
@@ -39,19 +39,17 @@ namespace WebApp1.Constant
             options.AddPolicy(PagesNameConst.TopSecret,
               policy => policy.RequireClaim(PagesNameConst.TopSecret, "Yes"));
 
-            options.AddPolicy(PagesNameConst.SpecialActionManagement,
-           policy => policy.RequireClaim(PagesNameConst.SpecialActionManagement, "Yes"));
+            options.AddPolicy(PagesNameConst.UserClaimDemo,
+              policy => policy.RequireClaim(PagesNameConst.UserClaimDemo, "Yes"));
 
+            options.AddPolicy(PagesNameConst.UserClaimActionDemoManagement,
+           policy => policy.RequireClaim(PagesNameConst.UserClaimActionDemoManagement, "Yes"));
 
-
-            options.AddPolicy(PagesNameConst.Special,
-              policy => policy.RequireClaim(PagesNameConst.Special, "Yes"));
-
-            options.AddPolicy(SpecialActionConst.CanViewDocument,
-              policy => policy.RequireClaim(SpecialActionConst.CanViewDocument, "Yes"));   
+            options.AddPolicy(DemoUserClaimConst.CanViewDocument,
+              policy => policy.RequireClaim(DemoUserClaimConst.CanViewDocument, "Yes"));   
             
-            options.AddPolicy(SpecialActionConst.CanEditDocument,
-              policy => policy.RequireClaim(SpecialActionConst.CanEditDocument, "Yes"));
+            options.AddPolicy(DemoUserClaimConst.CanEditDocument,
+              policy => policy.RequireClaim(DemoUserClaimConst.CanEditDocument, "Yes"));
         }
     }
 }

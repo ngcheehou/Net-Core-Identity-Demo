@@ -1,13 +1,13 @@
 ﻿namespace WebApp1.Constant
 {
-    public class SpecialActionDictionary : Dictionary<string, string>
+    public class DemoUserClaimDictionary : Dictionary<string, string>
     {
         private static object _lock = new object();
-        private static SpecialActionDictionary? _instance;
+        private static DemoUserClaimDictionary? _instance;
 
-        private SpecialActionDictionary() { }
+        private DemoUserClaimDictionary() { }
 
-        public static SpecialActionDictionary Instance
+        public static DemoUserClaimDictionary Instance
         {
             get
             {
@@ -17,7 +17,7 @@
                     {
                         if (_instance == null)
                         {
-                            _instance = new SpecialActionDictionary();
+                            _instance = new DemoUserClaimDictionary();
                         }
                     }
                 }

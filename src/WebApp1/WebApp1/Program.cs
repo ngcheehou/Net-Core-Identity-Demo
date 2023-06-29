@@ -15,7 +15,7 @@ builder.Services.AddDbContext<MyDbContext>(options =>
 
 builder.Services.ConfigureApplicationCookie(options =>
 {
-    options.LoginPath = "/Identity/Account/Login";  
+    options.LoginPath = "/Identity/Login";  
     options.AccessDeniedPath = "/Identity/AccessDenied";
 });
 
@@ -23,6 +23,14 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
 {
     options.SignIn.RequireConfirmedAccount = false;
     options.User.RequireUniqueEmail = false;
+
+    options.Password.RequireDigit = false;
+    options.Password.RequireLowercase = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequiredLength = 0;
+    options.Password.RequiredUniqueChars = 0;
+
 }).AddEntityFrameworkStores<MyDbContext>().AddDefaultTokenProviders();
 
 builder.Services.AddAuthorization(options =>
@@ -40,6 +48,7 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
+ 
 // Add services to the container.
 builder.Services.AddRazorPages();
 
@@ -59,6 +68,8 @@ app.UseRouting();
 
 app.UseAuthentication();  // Add this before UseAuthorization
 app.UseAuthorization();
+
+//app.UseEndpoints();
 
 app.UseSession();
 

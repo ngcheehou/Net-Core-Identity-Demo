@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using WebApp1.Constant;
 using System.Security.Claims;
 using System.Data;
+using static System.Formats.Asn1.AsnWriter;
 
 namespace WebApp1.Pages.HR
 {
@@ -12,7 +13,13 @@ namespace WebApp1.Pages.HR
     {
 
         private readonly RoleManager<IdentityRole> _roleManager;
-       
+
+        private readonly UserManager<IdentityUser> _userManager;
+
+        private readonly SignInManager<IdentityUser> _signinManager;
+
+        private readonly IServiceScopeFactory _scopeFactory;
+
 
 
 
@@ -33,11 +40,15 @@ namespace WebApp1.Pages.HR
         [BindProperty(SupportsGet = true)]
         public string? DepartmentID { get; set; }//user select
 
-        public PageAccessManagementModel(RoleManager<IdentityRole> rolemanager, UserManager<IdentityUser> usermanager)
+        public PageAccessManagementModel(RoleManager<IdentityRole> rolemanager, UserManager<IdentityUser> usermanager, 
+            SignInManager<IdentityUser> singinmanager, IServiceScopeFactory scopeFactory)
         {
 
             _roleManager = rolemanager;
-          
+            _userManager = usermanager;
+            _signinManager = singinmanager;
+            _scopeFactory = scopeFactory;
+
 
         }
         public IList<SelectListItem>? DepartmentOptions { get; set; }
@@ -108,6 +119,8 @@ namespace WebApp1.Pages.HR
                             }
 
                         }
+
+                         
                         TempData["Success"] = "true";// ViewData to trigger the update successful modal.
                         return RedirectToPage("./PageAccessManagement");
                     }
@@ -128,6 +141,9 @@ namespace WebApp1.Pages.HR
 
 
         }
+
+  
+      
 
         public void OnGetResetSuccess()
         {

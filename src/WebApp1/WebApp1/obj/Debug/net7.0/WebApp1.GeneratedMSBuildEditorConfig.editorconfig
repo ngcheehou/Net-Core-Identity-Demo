@@ -16,16 +16,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\User\source\repos\ngcheehou\EmployeeManagement\src\WebApp1\WebApp1
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/User/source/repos/ngcheehou/EmployeeManagement/src/WebApp1/WebApp1/Pages/DailyVisit/DemoUserClaim.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFpbHlWaXNpdFxEZW1vVXNlckNsYWltLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/User/source/repos/ngcheehou/EmployeeManagement/src/WebApp1/WebApp1/Pages/DailyVisit/InformationTechnology.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFpbHlWaXNpdFxJbmZvcm1hdGlvblRlY2hub2xvZ3kuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/User/source/repos/ngcheehou/EmployeeManagement/src/WebApp1/WebApp1/Pages/DailyVisit/SalesReport.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFpbHlWaXNpdFxTYWxlc1JlcG9ydC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/User/source/repos/ngcheehou/EmployeeManagement/src/WebApp1/WebApp1/Pages/DailyVisit/SpecialPage.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFpbHlWaXNpdFxTcGVjaWFsUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/User/source/repos/ngcheehou/EmployeeManagement/src/WebApp1/WebApp1/Pages/DailyVisit/TopSecretCEOOnly.cshtml]
@@ -56,8 +56,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSFJcUmVzZXRFbXBsb3llZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/source/repos/ngcheehou/EmployeeManagement/src/WebApp1/WebApp1/Pages/HR/SpecialActionManagement.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSFJcU3BlY2lhbEFjdGlvbk1hbmFnZW1lbnQuY3NodG1s
+[C:/Users/User/source/repos/ngcheehou/EmployeeManagement/src/WebApp1/WebApp1/Pages/HR/UserClaimActionManagement.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSFJcVXNlckNsYWltQWN0aW9uTWFuYWdlbWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/User/source/repos/ngcheehou/EmployeeManagement/src/WebApp1/WebApp1/Pages/Identity/AccessDenied.cshtml]

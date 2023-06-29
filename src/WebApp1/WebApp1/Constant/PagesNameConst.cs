@@ -14,8 +14,8 @@
 
         public const string HR = "HR Pages";
 
-        public const string Special = "Special Pages";
+        public const string UserClaimDemo = "User Claim Demo Pages";
 
-        public const string SpecialActionManagement = "Special Action Management Pages";
+        public const string UserClaimActionDemoManagement = "User Claim Action Management Pages";
     }
 }
