@@ -5,12 +5,44 @@
       "PackagePath": "staticwebassets\\WebApp1.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\User\\source\\repos\\ngcheehou\\EmployeeManagement\\src\\WebApp1\\WebApp1\\wwwroot\\QRImage\\qr.jpg",
-      "PackagePath": "staticwebassets\\QRImage\\qr.jpg"
+      "Id": "C:\\Users\\User\\source\\repos\\ngcheehou\\EmployeeManagement\\src\\WebApp1\\WebApp1\\wwwroot\\Image\\638236714295127571_qr.jpg",
+      "PackagePath": "staticwebassets\\Image\\638236714295127571_qr.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\source\\repos\\ngcheehou\\EmployeeManagement\\src\\WebApp1\\WebApp1\\wwwroot\\QRImage\\qr2.jpg",
-      "PackagePath": "staticwebassets\\QRImage\\qr2.jpg"
+      "Id": "C:\\Users\\User\\source\\repos\\ngcheehou\\EmployeeManagement\\src\\WebApp1\\WebApp1\\wwwroot\\Image\\QR_20230629214818278.jpg",
+      "PackagePath": "staticwebassets\\Image\\QR_20230629214818278.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ngcheehou\\EmployeeManagement\\src\\WebApp1\\WebApp1\\wwwroot\\Image\\QR_20230629215857946.jpg",
+      "PackagePath": "staticwebassets\\Image\\QR_20230629215857946.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ngcheehou\\EmployeeManagement\\src\\WebApp1\\WebApp1\\wwwroot\\Image\\QR_20230629220106123.jpg",
+      "PackagePath": "staticwebassets\\Image\\QR_20230629220106123.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ngcheehou\\EmployeeManagement\\src\\WebApp1\\WebApp1\\wwwroot\\Image\\QR_20230629220452514.jpg",
+      "PackagePath": "staticwebassets\\Image\\QR_20230629220452514.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ngcheehou\\EmployeeManagement\\src\\WebApp1\\WebApp1\\wwwroot\\Image\\QR_20230629220637633.jpg",
+      "PackagePath": "staticwebassets\\Image\\QR_20230629220637633.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ngcheehou\\EmployeeManagement\\src\\WebApp1\\WebApp1\\wwwroot\\Image\\QR_20230629220855322.jpg",
+      "PackagePath": "staticwebassets\\Image\\QR_20230629220855322.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ngcheehou\\EmployeeManagement\\src\\WebApp1\\WebApp1\\wwwroot\\Image\\QR_20230629221111915.jpg",
+      "PackagePath": "staticwebassets\\Image\\QR_20230629221111915.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ngcheehou\\EmployeeManagement\\src\\WebApp1\\WebApp1\\wwwroot\\Image\\qr.jpg",
+      "PackagePath": "staticwebassets\\Image\\qr.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ngcheehou\\EmployeeManagement\\src\\WebApp1\\WebApp1\\wwwroot\\Image\\qr2.jpg",
+      "PackagePath": "staticwebassets\\Image\\qr2.jpg"
     },
     {
       "Id": "C:\\Users\\User\\source\\repos\\ngcheehou\\EmployeeManagement\\src\\WebApp1\\WebApp1\\wwwroot\\css\\site.css",

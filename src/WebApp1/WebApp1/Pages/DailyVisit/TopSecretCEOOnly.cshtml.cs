@@ -16,8 +16,7 @@ namespace WebApp1.Pages.DailyVisit
                 return RedirectToPage("/Identity/VerifyWith2FA");
             }
             HttpContext.Session.Remove("Passed2FA");
-            // If user has passed 2FA, then continue to the page
-
+           
 
             return Page();
         }

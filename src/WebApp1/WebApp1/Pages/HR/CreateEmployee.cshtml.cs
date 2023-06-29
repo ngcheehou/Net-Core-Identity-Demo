@@ -45,6 +45,7 @@ namespace WebApp1.Pages.HR
         string qrCodeBase64 = null;
         public string QRCodeImageBase64 { get; set; }
 
+        public string ImageName { get; set; }
 
 
         [BindProperty]
@@ -111,9 +112,12 @@ namespace WebApp1.Pages.HR
                         ImageConverter converter = new ImageConverter();
 
                         byte[] qrCodeImageData = (byte[])converter.ConvertTo(qrCodeImage, typeof(byte[]));
+                       
+                        ImageName = "QR_" + DateTime.Now.ToString("yyyyMMddHHmmssfff") + ".jpg";
+                        TempData["ImageName"] = ImageName;
+                        string imagePath = Path.Combine(_env.WebRootPath, "Image", ImageName);
 
 
-                        string imagePath = Path.Combine(_env.WebRootPath, "QRImage", "qr.jpg");
 
                         System.IO.File.WriteAllBytes(imagePath, qrCodeImageData);
 
