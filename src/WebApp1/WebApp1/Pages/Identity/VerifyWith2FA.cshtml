@@ -1,5 +1,5 @@
 ﻿@page
-@model WebApp1.Pages.Identity.LoginWith2FAModel
+@model WebApp1.Pages.Identity.VerifyWith2FAModel
 @{
 }
 
@@ -8,7 +8,7 @@
         <section class="my-5">
             <h1>@ViewData["Title"]</h1>
             <hr />
-            <p>Please provide your 2FA code to proceed</p>
+            <p>This is a highly confidential page. You need to provide 2FA OTP every time you view this page.</p>
             <div class="row">
                 <div>
                     <form method="post" asp-route-returnUrl="@Model.ReturnUrl" class="needs-validation" novalidate>

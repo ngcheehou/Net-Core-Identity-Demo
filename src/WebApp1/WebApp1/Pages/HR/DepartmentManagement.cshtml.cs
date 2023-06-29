@@ -7,14 +7,12 @@ namespace WebApp1.Pages.HR
 {
     public class DepartmentManagementModel : PageModel
     {
-        
-        private readonly UserManager<IdentityUser> _userManager;
+         
         private readonly RoleManager<IdentityRole> _roleManager;
 
-        public DepartmentManagementModel( UserManager<IdentityUser> usermanager, RoleManager<IdentityRole> rolemanager)
+        public DepartmentManagementModel(  RoleManager<IdentityRole> rolemanager)
         {
-           
-            _userManager = usermanager;
+            
             _roleManager = rolemanager;
         }
 
@@ -25,8 +23,7 @@ namespace WebApp1.Pages.HR
         public async Task<IActionResult> OnPostAsync()
         {
 
-            var user = await _userManager.GetUserAsync(User);
-
+           
             if (!ModelState.IsValid)
             {
                 return Page();

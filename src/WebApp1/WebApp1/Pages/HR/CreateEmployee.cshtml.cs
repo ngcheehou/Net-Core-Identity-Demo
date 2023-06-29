@@ -8,10 +8,13 @@ using System.Drawing;
 using QRCoder;
 using Image = iText.Layout.Element.Image;
 
+
 namespace WebApp1.Pages.HR
 {
     public class CreateEmployeeModel : PageModel
     {
+
+
         private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
@@ -88,6 +91,7 @@ namespace WebApp1.Pages.HR
                 if (result.Succeeded)
                 {
 
+                    #region Generate QR Code for 2FA
 
                     if (IsMFAChecked)
                     {
@@ -105,18 +109,19 @@ namespace WebApp1.Pages.HR
                         Bitmap qrCodeImage = qrCode.GetGraphic(20);
 
                         ImageConverter converter = new ImageConverter();
-                         
+
                         byte[] qrCodeImageData = (byte[])converter.ConvertTo(qrCodeImage, typeof(byte[]));
 
-                       
+
                         string imagePath = Path.Combine(_env.WebRootPath, "QRImage", "qr.jpg");
-                       
+
                         System.IO.File.WriteAllBytes(imagePath, qrCodeImageData);
-                        
+
                         TempData["QRCode"] = "true";
-                       
+
 
                     }
+                    #endregion
                     TempData["Success"] = "true";
                 }
 

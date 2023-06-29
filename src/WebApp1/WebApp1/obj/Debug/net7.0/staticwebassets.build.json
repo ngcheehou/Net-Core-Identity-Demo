@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jOE0GRcUWDDslCA+qad3ZXNHNg/Dvg7iCkNrkK3CJhI=",
+  "Hash": "0yhPYOxNDjYXNqGDXLX8PmgVU+/jjCnFKiw3JgAOpF0=",
   "Source": "WebApp1",
   "BasePath": "_content/WebApp1",
   "Mode": "Default",
@@ -1086,6 +1086,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\QRImage\\qr.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\ngcheehou\\EmployeeManagement\\src\\WebApp1\\WebApp1\\wwwroot\\QRImage\\qr2.jpg",
+      "SourceId": "WebApp1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\ngcheehou\\EmployeeManagement\\src\\WebApp1\\WebApp1\\wwwroot\\",
+      "BasePath": "_content/WebApp1",
+      "RelativePath": "QRImage/qr2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\QRImage\\qr2.jpg"
     }
   ]
 }

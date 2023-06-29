@@ -13,10 +13,12 @@ namespace WebApp1.Pages.DailyVisit
             if (HttpContext.Session.GetString("Passed2FA") != "true")
             {
                 TempData["ReturnUrl"] = "/DailyVisit/TopSecretCEOOnly";
-                return RedirectToPage("/Identity/LoginWith2FA");
+                return RedirectToPage("/Identity/VerifyWith2FA");
             }
             HttpContext.Session.Remove("Passed2FA");
             // If user has passed 2FA, then continue to the page
+
+
             return Page();
         }
 

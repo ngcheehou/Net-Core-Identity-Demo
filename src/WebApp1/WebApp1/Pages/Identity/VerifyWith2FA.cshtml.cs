@@ -1,4 +1,3 @@
-using DataLibrary;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -7,14 +6,13 @@ using static System.Net.WebRequestMethods;
 
 namespace WebApp1.Pages.Identity
 {
-    public class LoginWith2FAModel : PageModel
+    public class VerifyWith2FAModel : PageModel
     {
-        private readonly SignInManager<IdentityUser> _signInManager;
+        
         private readonly UserManager<IdentityUser> _userManager;
 
-        public LoginWith2FAModel(SignInManager<IdentityUser> signInManager, UserManager<IdentityUser> usermanager)
-        {
-            _signInManager = signInManager;
+        public VerifyWith2FAModel( UserManager<IdentityUser> usermanager)
+        {// _signInManager = signInManager;
             _userManager = usermanager;
         }
 
@@ -52,10 +50,11 @@ namespace WebApp1.Pages.Identity
             if (!ModelState.IsValid)
             {
                 return Page();
-           }
+            }
+            var user = await _userManager.GetUserAsync(User);
 
 
-            var user = await _signInManager.GetTwoFactorAuthenticationUserAsync();
+
             if (user == null)
             {
                 ModelState.AddModelError(string.Empty, "Invalid. This user is not a 2FA employee.");
@@ -65,13 +64,14 @@ namespace WebApp1.Pages.Identity
 
             var authenticatorCode = Input.TwoFactorCode.Replace(" ", string.Empty).Replace("-", string.Empty);
 
-            var result = await _signInManager.TwoFactorAuthenticatorSignInAsync(authenticatorCode, rememberMe, Input.RememberMachine);
-          
+            bool isOTPValid = await _userManager.VerifyTwoFactorTokenAsync(user, _userManager.Options.Tokens.AuthenticatorTokenProvider, authenticatorCode);
 
-            if (result.Succeeded)
+
+            if (isOTPValid)
             {
- 
-                HttpContext.Session.Remove("Passed2FA");
+                // Redirect user back to the originally intended page, which is stored in TempData
+                returnUrl = TempData["ReturnUrl"] as string ?? Url.Content("~/");
+                HttpContext.Session.SetString("Passed2FA", "true");  // To show the 2FA success
                 return LocalRedirect(returnUrl);
             }
             else
@@ -80,6 +80,5 @@ namespace WebApp1.Pages.Identity
                 return Page();
             }
         }
-
     }
 }
