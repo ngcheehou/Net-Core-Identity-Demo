@@ -13,12 +13,6 @@ builder.Services.AddDbContext<MyDbContext>(options =>
     options.UseSqlServer(connectionString, b => b.MigrationsAssembly("WebApp1")));
 
 
-builder.Services.ConfigureApplicationCookie(options =>
-{
-    options.LoginPath = "/Identity/Login";  
-    options.AccessDeniedPath = "/Identity/AccessDenied";
-});
-
 builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
 {
     options.SignIn.RequireConfirmedAccount = false;
@@ -33,6 +27,24 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
 
 }).AddEntityFrameworkStores<MyDbContext>().AddDefaultTokenProviders();
 
+
+
+
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = "/Identity/Login";
+    options.AccessDeniedPath = "/Identity/AccessDenied";
+});
+
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
+
+
 builder.Services.AddAuthorization(options =>
 {
     options.AddPageAccessPolicy();
@@ -41,14 +53,7 @@ builder.Services.AddAuthorization(options =>
 builder.Services.ConfigurPageNameFunction();
 
 // Add session services.
-builder.Services.AddSession(options =>
-{
-    options.IdleTimeout = TimeSpan.FromMinutes(30);
-    options.Cookie.HttpOnly = true;
-    options.Cookie.IsEssential = true;
-});
 
- 
 // Add services to the container.
 builder.Services.AddRazorPages();
 
@@ -69,10 +74,13 @@ app.UseRouting();
 app.UseAuthentication();  // Add this before UseAuthorization
 app.UseAuthorization();
 
-//app.UseEndpoints();
+
 
 app.UseSession();
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapRazorPages();
+});
 
-app.MapRazorPages();
 
 app.Run();

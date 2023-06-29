@@ -1,11 +1,10 @@
 using DataLibrary;
-using DataLibrary;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
 
-namespace WebApp1.Identity
+namespace WebApp1.Pages.Identity
 {
     public class LoginModel : PageModel
     {
@@ -49,7 +48,7 @@ namespace WebApp1.Identity
                     var result = await _signInManager.PasswordSignInAsync(user, Input.Password, false, lockoutOnFailure: true);
                     if (result.Succeeded)
                     {
-                       
+
                         return LocalRedirect(returnUrl);
                     }
 
