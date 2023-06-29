@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4nN2wT7AjLtwAG2fmpnDaEGGlwLlPBtH0FLeveRpqlg=",
+  "Hash": "4Exy7vP+bBqpDXEgC82n85CVWPn0gdUDtLX9jb+42rM=",
   "Source": "WebApp1",
   "BasePath": "_content/WebApp1",
   "Mode": "Default",
@@ -236,6 +236,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Image\\QR_20230629221111915.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\ngcheehou\\EmployeeManagement\\src\\WebApp1\\WebApp1\\wwwroot\\Image\\QR_20230629223115414.jpg",
+      "SourceId": "WebApp1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\ngcheehou\\EmployeeManagement\\src\\WebApp1\\WebApp1\\wwwroot\\",
+      "BasePath": "_content/WebApp1",
+      "RelativePath": "Image/QR_20230629223115414.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Image\\QR_20230629223115414.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\ngcheehou\\EmployeeManagement\\src\\WebApp1\\WebApp1\\wwwroot\\Image\\QR_20230629224954415.jpg",
+      "SourceId": "WebApp1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\ngcheehou\\EmployeeManagement\\src\\WebApp1\\WebApp1\\wwwroot\\",
+      "BasePath": "_content/WebApp1",
+      "RelativePath": "Image/QR_20230629224954415.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Image\\QR_20230629224954415.jpg"
     },
     {
       "Identity": "C:\\Users\\User\\source\\repos\\ngcheehou\\EmployeeManagement\\src\\WebApp1\\WebApp1\\wwwroot\\Image\\qr2.jpg",

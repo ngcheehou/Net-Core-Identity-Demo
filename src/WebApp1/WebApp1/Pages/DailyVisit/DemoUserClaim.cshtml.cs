@@ -39,18 +39,16 @@ namespace WebApp1.Pages.DailyVisit
 
         public async Task OnPost()
         {
-            var user = await _userManager.GetUserAsync(User);
-
-            // Perform the authorization check for the CanEditDocument policy
-            var authorizationResult = await _authorizationService.AuthorizeAsync(User, null, DemoUserClaimConst.CanEditDocument);
-            if (!authorizationResult.Succeeded)
+            if (!CanEditDocument)
             {
-                // Handle the case where the user is not authorized to edit the document
+                //sorry you are not allowed to Edit Documet
                 return;
             }
-
-            var UserClaims = await _userManager.GetClaimsAsync(user);
-            // Code to handle the form submission and edit the document
+            else
+            {
+                //proceed with edit document
+            }
+           
         }
     }
 }

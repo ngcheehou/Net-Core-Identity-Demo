@@ -12,7 +12,7 @@
 
 <form id="form-get" method="get">
     <div>
-        <label for="department">Department:</label>
+        <label for="employee">Employee:</label>
         <div class="ms-3 w-50">
             <select asp-for="EmployeeID" asp-items="@Model.EmployeeOptions" class="form-control" onchange="submitForm()">
                 <option value="">None Selected</option>
@@ -28,8 +28,8 @@
         <table class="table">
             <thead class="table-dark">
                 <tr>
-                    <th>Page Name</th>
-                    <th>Has Access? </th>
+                    <th>Action Name</th>
+                    <th>Has Rights? </th>
                 </tr>
             </thead>
             <tbody>

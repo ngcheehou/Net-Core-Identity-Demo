@@ -19,6 +19,8 @@ namespace WebApp1.Pages.HR
 
         private readonly UrlEncoder _urlEncoder;
 
+        public string ImageName { get; set; }
+
         public byte[]? ImgData { get; set; }
         public IList<SelectListItem>? EmployeeOptions { get; set; }
 
@@ -53,7 +55,7 @@ namespace WebApp1.Pages.HR
             {
                 // Generate a new password reset token
                 var token = await _userManager.GeneratePasswordResetTokenAsync(user);
-                var password = GeneratePassword(); ;// Create your own ghen(12);
+                var password = GeneratePassword(); 
 
 
                 var resetResult = await _userManager.ResetPasswordAsync(user, token, password);
@@ -73,22 +75,21 @@ namespace WebApp1.Pages.HR
                     await _userManager.SetAuthenticationTokenAsync(user, "Google", "secret", null);
 
                     await _userManager.GenerateNewTwoFactorRecoveryCodesAsync(user, 1);
+
                     string AuthenticatorUri = await LoadSharedKeyAndQrCodeUriAsync(user);
 
                     QRCodeGenerator qrGenerator = new QRCodeGenerator();
                     QRCodeData qrCodeData = qrGenerator.CreateQrCode(AuthenticatorUri, QRCodeGenerator.ECCLevel.Q);
                     QRCode qrCode = new QRCode(qrCodeData);
                     Bitmap qrCodeImage = qrCode.GetGraphic(20);
+
                     ImageConverter converter = new ImageConverter();
-
-                    ImgData = (byte[])converter.ConvertTo(qrCodeImage, typeof(byte[]));
-
 
                     byte[] qrCodeImageData = (byte[])converter.ConvertTo(qrCodeImage, typeof(byte[]));
 
-                    ImgData = qrCodeImageData;
-
-                    string imagePath = Path.Combine(_env.WebRootPath, "QRImage", "qr.jpg");
+                    ImageName = "QR_" + DateTime.Now.ToString("yyyyMMddHHmmssfff") + ".jpg";
+                    TempData["ImageName"] = ImageName;
+                    string imagePath = Path.Combine(_env.WebRootPath, "Image", ImageName);
 
                     System.IO.File.WriteAllBytes(imagePath, qrCodeImageData);
                     // Save the image to the specified path
