@@ -27,21 +27,29 @@
         //{
             <a href="/DailyVisit/SalesReport" class="list-group-item list-group-item-action">
                 Sales Report Page
-        </a>
+            </a>
         //}
-        <a href="/DailyVisit/TopSecretCEOOnly" class="list-group-item list-group-item-action">
-            Top Secret Page
-        </a>
 
-        <a href="/DailyVisit/DemoUserClaim" class="list-group-item list-group-item-action">
-            Demo User Claim Page
-        </a>
+        //if (User.HasClaim(x => x.Type == Constant.PagesNameConst.TopSecret))
+        //{
+            <a href="/DailyVisit/TopSecretCEOOnly" class="list-group-item list-group-item-action">
+                Top Secret Page
+            </a>
+        //}
 
-        <div class="list-group-item list-group-item-action" data-bs-toggle="collapse" data-bs-target="#hrSubmenu" aria-expanded="false">
-            HR Activity
-        </div>
-        <div id="hrSubmenu" class="collapse">
-            <a href="/HR/CreateEmployee" class="list-group-item list-group-item-action">
+        //if (User.HasClaim(x => x.Type == Constant.PagesNameConst.UserClaimDemo))
+        //{
+            <a href="/DailyVisit/DemoUserClaim" class="list-group-item list-group-item-action">
+                Demo User Claim Page
+            </a>
+        //}
+        //if (User.HasClaim(x => x.Type == Constant.PagesNameConst.HR))
+        //{
+            <div class="list-group-item list-group-item-action" data-bs-toggle="collapse" data-bs-target="#hrSubmenu" aria-expanded="false">
+                HR Activity
+            </div>
+            <div id="hrSubmenu" class="collapse">
+                <a href="/HR/CreateEmployee" class="list-group-item list-group-item-action">
                 Create New Employee
             </a>
             <a href="/HR/DepartmentManagement" class="list-group-item list-group-item-action">
@@ -61,5 +69,6 @@
             </a>
 
         </div>
+        //}
     }
 </div>
