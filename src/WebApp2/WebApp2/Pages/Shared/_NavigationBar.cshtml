@@ -1,10 +1,11 @@
-﻿@using Microsoft.AspNetCore.Authorization
+﻿@using DataLibrary.Identity;
+@using Microsoft.AspNetCore.Authorization
 @using Microsoft.AspNetCore.Identity;
 
 
 
 @inject Microsoft.AspNetCore.Identity.UserManager<MyEmployee> UserManager
-@inject Microsoft.AspNetCore.Identity.RoleManager<IdentityRole> RoleManager
+@inject Microsoft.AspNetCore.Identity.RoleManager<MyDepartment> RoleManager
 
 
 

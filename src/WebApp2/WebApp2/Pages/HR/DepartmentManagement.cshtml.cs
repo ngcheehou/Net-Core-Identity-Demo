@@ -8,9 +8,9 @@ namespace WebApp2.Pages.HR
     public class DepartmentManagementModel : PageModel
     {
          
-        private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly RoleManager<MyDepartment> _roleManager;
 
-        public DepartmentManagementModel(  RoleManager<IdentityRole> rolemanager)
+        public DepartmentManagementModel(  RoleManager<MyDepartment> rolemanager)
         {
             
             _roleManager = rolemanager;
@@ -18,7 +18,7 @@ namespace WebApp2.Pages.HR
 
 
         [BindProperty]
-        public IdentityRole IdentityRole { get; set; }
+        public MyDepartment MyDepartment { get; set; }
 
         public async Task<IActionResult> OnPostAsync()
         {
@@ -30,20 +30,20 @@ namespace WebApp2.Pages.HR
             }
 
 
-            if (await _roleManager.RoleExistsAsync(this.IdentityRole.NormalizedName))
+            if (await _roleManager.RoleExistsAsync(this.MyDepartment.NormalizedName))
             {
                 ModelState.AddModelError("", "Name is exists.");
 
                 return base.Page();
             }
 
-            IdentityRole IdentityRole = new IdentityRole();
+            MyDepartment MyDepartment = new MyDepartment();
 
 
-            IdentityRole.Name = this.IdentityRole.NormalizedName;
-            IdentityRole.NormalizedName = this.IdentityRole.NormalizedName;
+            MyDepartment.Name = this.MyDepartment.NormalizedName;
+            MyDepartment.NormalizedName = this.MyDepartment.NormalizedName;
 
-            await _roleManager.CreateAsync(IdentityRole);
+            await _roleManager.CreateAsync(MyDepartment);
 
             TempData["Success"] = "true";// ViewData to trigger the update successful modal.
             return RedirectToPage("./DepartmentManagement");

@@ -17,12 +17,12 @@ namespace WebApp2.Pages.HR
 
         private readonly UserManager<MyEmployee> _userManager;
         private readonly SignInManager<MyEmployee> _signInManager;
-        private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly RoleManager<MyDepartment> _roleManager;
         private readonly UrlEncoder _urlEncoder;
 
         private readonly IWebHostEnvironment _env;
         public string qrCodeImageBase64 { get; set; }
-        public CreateEmployeeModel(UserManager<MyEmployee> userManager, RoleManager<IdentityRole> rolemanager,
+        public CreateEmployeeModel(UserManager<MyEmployee> userManager, RoleManager<MyDepartment> rolemanager,
             SignInManager<MyEmployee> signInManager, UrlEncoder urlencoder, IWebHostEnvironment env)
         {
             _userManager = userManager;

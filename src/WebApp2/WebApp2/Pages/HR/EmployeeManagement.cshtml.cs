@@ -1,5 +1,6 @@
- 
 
+
+using DataLibrary.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -10,12 +11,12 @@ namespace WebApp2.Pages.HR
     public class EmployeeManagementModel : PageModel
     {
          
-        private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly RoleManager<MyDepartment> _roleManager;
         private readonly UserManager<MyEmployee> _userManager;
 
 
 
-        public EmployeeManagementModel( RoleManager<IdentityRole> rolemanager, UserManager<MyEmployee> usermanager)
+        public EmployeeManagementModel( RoleManager<MyDepartment> rolemanager, UserManager<MyEmployee> usermanager)
         {
         
             _roleManager = rolemanager;
@@ -30,7 +31,7 @@ namespace WebApp2.Pages.HR
         [BindProperty(SupportsGet = true)]
         public string? SelectedDepartmentId { get; set; }//user select
 
-        public List<IdentityRole> Departments { get; set; }
+        public List<MyDepartment> Departments { get; set; }
 
         public IList<SelectListItem>? DepartmentOptions { get; set; }
         public IList<SelectListItem>? EmployeeOptions { get; set; }

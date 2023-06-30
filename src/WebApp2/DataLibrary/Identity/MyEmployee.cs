@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataLibrary.Identity
 {
-    public class MyEmployee : MyEmployee
+    public class MyEmployee : IdentityUser
 
     {
         public WorkMode EmployeeWorkMode { get; set; }

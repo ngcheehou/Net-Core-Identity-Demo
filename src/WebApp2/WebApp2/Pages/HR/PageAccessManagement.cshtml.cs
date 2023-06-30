@@ -6,13 +6,14 @@ using WebApp2.Constant;
 using System.Security.Claims;
 using System.Data;
 using static System.Formats.Asn1.AsnWriter;
+using DataLibrary.Identity;
 
 namespace WebApp2.Pages.HR
 {
     public class PageAccessManagementModel : PageModel
     {
 
-        private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly RoleManager<MyDepartment> _roleManager;
 
         private readonly UserManager<MyEmployee> _userManager;
 
@@ -40,7 +41,7 @@ namespace WebApp2.Pages.HR
         [BindProperty(SupportsGet = true)]
         public string? DepartmentID { get; set; }//user select
 
-        public PageAccessManagementModel(RoleManager<IdentityRole> rolemanager, UserManager<MyEmployee> usermanager, 
+        public PageAccessManagementModel(RoleManager<MyDepartment> rolemanager, UserManager<MyEmployee> usermanager, 
             SignInManager<MyEmployee> singinmanager, IServiceScopeFactory scopeFactory)
         {
 
