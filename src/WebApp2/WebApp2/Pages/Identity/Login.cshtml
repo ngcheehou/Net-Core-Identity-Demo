@@ -1,0 +1,35 @@
+﻿@page
+@model WebApp2.Pages.Identity.LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="container py-5">
+    <h1 class="mb-4">Login</h1>
+
+    @if (!string.IsNullOrEmpty(TempData["ErrorMessage"] as string))
+    {
+        <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+    }
+
+    @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+    {
+        <div class="alert alert-danger">@ViewBag.ErrorMessage</div>
+    }
+
+    <form method="post">
+        <div class="form-group mb-3">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" class="form-control" required>
+        </div>
+        <div class="form-group mb-3">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" class="form-control" required>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+    </form>
+</div>

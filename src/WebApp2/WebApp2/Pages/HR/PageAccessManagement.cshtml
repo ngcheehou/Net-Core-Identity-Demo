@@ -1,0 +1,97 @@
+﻿@page
+@model WebApp2.Pages.HR.PageAccessManagementModel
+@{
+}
+
+
+<div id="successDialog" class="alert alert-success" style="display: none;">
+    Update Success!
+</div>
+
+
+<form id="form-get" method="get">
+    <div>
+        <label for="department">Department:</label>
+        <div class="ms-3 w-50">
+            <select asp-for="DepartmentID" asp-items="@Model.DepartmentOptions" class="form-control" onchange="submitForm()">
+                <option value="">None Selected</option>
+            </select>
+        </div>
+    </div>
+</form>
+
+
+<div id="result_cont" class="mt-4">
+    <form id="form-post" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <table class="table">
+            <thead class="table-dark">
+                <tr>
+                    <th>Page Name</th>
+                    <th>Has Access? </th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < Model.PageAccessName.Count; i++)
+                {
+                    <tr>
+                        <td>
+                            @Model.PageAccessName[i].PageName
+                            <input type="hidden" asp-for="@Model.PageAccessName[i].ClaimType" />
+                        </td>
+                        <td>
+                            <input type="checkbox" asp-for="@Model.PageAccessName[i].Selected" />
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <input type="submit" class="btn btn-primary text-uppercase"
+        @(string.IsNullOrWhiteSpace(Model.DepartmentID) ? "disabled" : "") value="Update" />
+
+        @Html.HiddenFor(m => @Model.DepartmentID)
+    </form>
+</div>
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var success = '@(TempData["Success"] ?? "false")';
+
+        if (success === "true") {
+            // Show the success dialog
+            $('#successDialog').show();
+
+            // Wait for 1 second (1000 milliseconds)
+            setTimeout(function () {
+                // Hide the success dialog
+                $('#successDialog').hide();
+
+                // Reload the page
+                location.reload();
+            }, 2000);
+        }
+    });
+</script>
+
+
+
+<script type="text/javascript">
+    function submitForm() {
+        $('#form-get').submit();
+    }
+</script>
+
+<script type="text/javascript">
+    $(function () {
+        $('#department').on('change', function () {
+            var selectedValue = $(this).val();
+            $('#selectedDepartment').val(selectedValue);
+            $('#form-get').submit();
+        });
+    })
+</script>

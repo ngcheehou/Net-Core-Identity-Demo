@@ -1,4 +1,57 @@
+using Microsoft.EntityFrameworkCore;
+using DataLibrary;
+using DataLibrary.Identity;
+using WebApp2.Constant;
+using Microsoft.AspNetCore.Identity;
+
 var builder = WebApplication.CreateBuilder(args);
+
+
+var connectionString = builder.Configuration.GetConnectionString("MyDBContextConnection")
+    ?? throw new InvalidOperationException("Connection string 'MyDBContextConnection' not found.");
+
+builder.Services.AddDbContext<MyDbContext>(options =>
+    options.UseSqlServer(connectionString, b => b.MigrationsAssembly("WebApp2")));
+
+
+builder.Services.AddIdentity<MyEmployee, MyDepartment>(options =>
+{
+    options.SignIn.RequireConfirmedAccount = false;
+    options.User.RequireUniqueEmail = false;
+
+    options.Password.RequireDigit = false;
+    options.Password.RequireLowercase = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequiredLength = 0;
+    options.Password.RequiredUniqueChars = 0;
+
+}).AddEntityFrameworkStores<MyDbContext>().AddDefaultTokenProviders();
+
+
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = "/Identity/Login";
+    options.AccessDeniedPath = "/Identity/AccessDenied";
+});
+
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
+
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPageAccessPolicy();
+});
+
+builder.Services.ConfigurePageNameFunction();
+
+// Add session services.
 
 // Add services to the container.
 builder.Services.AddRazorPages();
@@ -9,7 +62,6 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
@@ -18,8 +70,16 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();  // Add this before UseAuthorization
 app.UseAuthorization();
 
-app.MapRazorPages();
+
+
+app.UseSession();
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapRazorPages();
+});
+
 
 app.Run();

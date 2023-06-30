@@ -1,0 +1,62 @@
+﻿@page
+@model WebApp2.Pages.HR.EmployeeManagementModel
+@{
+}
+<div class="container py-5">
+    <h1 class="mb-4">Employee Management</h1>
+
+    <div id="successDialog" class="alert alert-success" style="display: none;">
+        Update Success!
+    </div>
+
+    <form id="form-get" method="get" class="mb-4">
+        <div class="mb-3">
+            <label for="department" class="form-label">Employee:</label>
+            <select asp-for="SelectedEmployeeID" asp-items="@Model.EmployeeOptions" class="form-control" onchange="submitForm()">
+                <option value="">None Selected</option>
+            </select>
+        </div>
+    </form>
+    
+    <form method="post">
+        <div id="DepartmentDD" class="mb-3">
+            <label for="department" class="form-label">Department:</label>
+            <select asp-for="SelectedDepartmentId" asp-items="@Model.DepartmentOptions" class="form-control">
+                <option value="">None Selected</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var success = '@(TempData["Success"] ?? "false")';
+
+        if (success === "true") {
+            // Show the success dialog
+            $('#successDialog').show();
+
+            // Wait for 1 second (1000 milliseconds)
+            setTimeout(function () {
+                // Hide the success dialog
+                $('#successDialog').hide();
+
+                // Reload the page
+                location.reload();
+            }, 2000);
+        }
+    });
+</script>
+
+<script type="text/javascript">
+    function submitForm() {
+        $('#form-get').submit();
+    }
+</script>

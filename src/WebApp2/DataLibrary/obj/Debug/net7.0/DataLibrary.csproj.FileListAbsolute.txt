@@ -1,0 +1,14 @@
+C:\Users\User\source\repos\ngcheehou\EmployeeManagement\src\WebApp2\DataLibrary\bin\Debug\net7.0\DataLibrary.deps.json
+C:\Users\User\source\repos\ngcheehou\EmployeeManagement\src\WebApp2\DataLibrary\bin\Debug\net7.0\DataLibrary.runtimeconfig.json
+C:\Users\User\source\repos\ngcheehou\EmployeeManagement\src\WebApp2\DataLibrary\bin\Debug\net7.0\DataLibrary.dll
+C:\Users\User\source\repos\ngcheehou\EmployeeManagement\src\WebApp2\DataLibrary\bin\Debug\net7.0\DataLibrary.pdb
+C:\Users\User\source\repos\ngcheehou\EmployeeManagement\src\WebApp2\DataLibrary\obj\Debug\net7.0\DataLibrary.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\ngcheehou\EmployeeManagement\src\WebApp2\DataLibrary\obj\Debug\net7.0\DataLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\ngcheehou\EmployeeManagement\src\WebApp2\DataLibrary\obj\Debug\net7.0\DataLibrary.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\ngcheehou\EmployeeManagement\src\WebApp2\DataLibrary\obj\Debug\net7.0\DataLibrary.AssemblyInfo.cs
+C:\Users\User\source\repos\ngcheehou\EmployeeManagement\src\WebApp2\DataLibrary\obj\Debug\net7.0\DataLibrary.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ngcheehou\EmployeeManagement\src\WebApp2\DataLibrary\obj\Debug\net7.0\DataLibrary.dll
+C:\Users\User\source\repos\ngcheehou\EmployeeManagement\src\WebApp2\DataLibrary\obj\Debug\net7.0\refint\DataLibrary.dll
+C:\Users\User\source\repos\ngcheehou\EmployeeManagement\src\WebApp2\DataLibrary\obj\Debug\net7.0\DataLibrary.pdb
+C:\Users\User\source\repos\ngcheehou\EmployeeManagement\src\WebApp2\DataLibrary\obj\Debug\net7.0\DataLibrary.genruntimeconfig.cache
+C:\Users\User\source\repos\ngcheehou\EmployeeManagement\src\WebApp2\DataLibrary\obj\Debug\net7.0\ref\DataLibrary.dll

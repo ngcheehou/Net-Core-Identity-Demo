@@ -16,8 +16,68 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\User\source\repos\ngcheehou\EmployeeManagement\src\WebApp2\WebApp2
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/User/source/repos/ngcheehou/EmployeeManagement/src/WebApp2/WebApp2/Pages/DailyVisit/DemoUserClaim.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFpbHlWaXNpdFxEZW1vVXNlckNsYWltLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/ngcheehou/EmployeeManagement/src/WebApp2/WebApp2/Pages/DailyVisit/InformationTechnology.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFpbHlWaXNpdFxJbmZvcm1hdGlvblRlY2hub2xvZ3kuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/ngcheehou/EmployeeManagement/src/WebApp2/WebApp2/Pages/DailyVisit/SalesReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFpbHlWaXNpdFxTYWxlc1JlcG9ydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/ngcheehou/EmployeeManagement/src/WebApp2/WebApp2/Pages/DailyVisit/TopSecretCEOOnly.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFpbHlWaXNpdFxUb3BTZWNyZXRDRU9Pbmx5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/User/source/repos/ngcheehou/EmployeeManagement/src/WebApp2/WebApp2/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/ngcheehou/EmployeeManagement/src/WebApp2/WebApp2/Pages/HR/CreateEmployee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSFJcQ3JlYXRlRW1wbG95ZWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/ngcheehou/EmployeeManagement/src/WebApp2/WebApp2/Pages/HR/DepartmentManagement.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSFJcRGVwYXJ0bWVudE1hbmFnZW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/ngcheehou/EmployeeManagement/src/WebApp2/WebApp2/Pages/HR/EmployeeManagement.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSFJcRW1wbG95ZWVNYW5hZ2VtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/ngcheehou/EmployeeManagement/src/WebApp2/WebApp2/Pages/HR/PageAccessManagement.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSFJcUGFnZUFjY2Vzc01hbmFnZW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/ngcheehou/EmployeeManagement/src/WebApp2/WebApp2/Pages/HR/ResetEmployee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSFJcUmVzZXRFbXBsb3llZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/ngcheehou/EmployeeManagement/src/WebApp2/WebApp2/Pages/HR/UserClaimActionManagement.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSFJcVXNlckNsYWltQWN0aW9uTWFuYWdlbWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/ngcheehou/EmployeeManagement/src/WebApp2/WebApp2/Pages/Identity/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSWRlbnRpdHlcQWNjZXNzRGVuaWVkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/ngcheehou/EmployeeManagement/src/WebApp2/WebApp2/Pages/Identity/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSWRlbnRpdHlcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/ngcheehou/EmployeeManagement/src/WebApp2/WebApp2/Pages/Identity/LoginWith2FA.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSWRlbnRpdHlcTG9naW5XaXRoMkZBLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/ngcheehou/EmployeeManagement/src/WebApp2/WebApp2/Pages/Identity/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSWRlbnRpdHlcTG9nb3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/ngcheehou/EmployeeManagement/src/WebApp2/WebApp2/Pages/Identity/VerifyWith2FA.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSWRlbnRpdHlcVmVyaWZ5V2l0aDJGQS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/User/source/repos/ngcheehou/EmployeeManagement/src/WebApp2/WebApp2/Pages/Index.cshtml]
@@ -26,6 +86,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/User/source/repos/ngcheehou/EmployeeManagement/src/WebApp2/WebApp2/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/ngcheehou/EmployeeManagement/src/WebApp2/WebApp2/Pages/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/ngcheehou/EmployeeManagement/src/WebApp2/WebApp2/Pages/Shared/_NavigationBar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9OYXZpZ2F0aW9uQmFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/User/source/repos/ngcheehou/EmployeeManagement/src/WebApp2/WebApp2/Pages/Shared/_ValidationScriptsPartial.cshtml]

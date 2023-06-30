@@ -5,7 +5,7 @@ namespace WebApp1.Constant
     public static class PageNameConfiguration
     {
 
-        public static IServiceCollection ConfigurPageNameFunction(this IServiceCollection services)
+        public static IServiceCollection ConfigurePageNameFunction(this IServiceCollection services)
         {
             PageNameDictionary.Instance.Add("Sales Report Page", PagesNameConst.SalesReport);
             PageNameDictionary.Instance.Add("Information Technology Page", PagesNameConst.IT);
