@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MWcye9xAUo5rwXNa8/FDPSgFeyOKV1QsN+2551Up+FY=",
+  "Hash": "3R6IrY+k+8QdN85onMfBGJ6WVeDDW6zaO3kfIWHNN3M=",
   "Source": "WebApp2",
   "BasePath": "_content/WebApp2",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\ngcheehou\\EmployeeManagement\\src\\WebApp2\\WebApp2\\wwwroot\\Image\\QR_20230701104759808.jpg",
+      "SourceId": "WebApp2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\ngcheehou\\EmployeeManagement\\src\\WebApp2\\WebApp2\\wwwroot\\",
+      "BasePath": "_content/WebApp2",
+      "RelativePath": "Image/QR_20230701104759808.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Image\\QR_20230701104759808.jpg"
     },
     {
       "Identity": "C:\\Users\\User\\source\\repos\\ngcheehou\\EmployeeManagement\\src\\WebApp2\\WebApp2\\wwwroot\\js\\site.js",

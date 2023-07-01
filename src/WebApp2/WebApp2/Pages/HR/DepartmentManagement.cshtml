@@ -12,6 +12,7 @@
     <h4>Add a New Department</h4>
     <hr />
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
     <div class="form-group row">
         <label asp-for="MyDepartment.NormalizedName" class="col-sm-2 col-form-label">My Dept Name:</label>
         <div class="col-sm-6">
@@ -20,6 +21,13 @@
         </div>
     </div>
 
+    <div class="form-group row">
+        <label asp-for="MaxWorkingHour" class="col-sm-2 col-form-label">Max Working Hour:</label>
+        <div class="col-sm-6">
+            <input asp-for="MaxWorkingHour" class="form-control" />
+            <span asp-validation-for="MaxWorkingHour" class="text-danger"></span>
+        </div>
+    </div>
     <div class="form-group row">
         <div class="col-sm-10">
             <button type="submit" class="btn btn-primary">Add Department</button>

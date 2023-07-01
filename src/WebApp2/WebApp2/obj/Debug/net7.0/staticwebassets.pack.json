@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\WebApp2.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\User\\source\\repos\\ngcheehou\\EmployeeManagement\\src\\WebApp2\\WebApp2\\wwwroot\\Image\\QR_20230701104759808.jpg",
+      "PackagePath": "staticwebassets\\Image\\QR_20230701104759808.jpg"
+    },
+    {
       "Id": "C:\\Users\\User\\source\\repos\\ngcheehou\\EmployeeManagement\\src\\WebApp2\\WebApp2\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

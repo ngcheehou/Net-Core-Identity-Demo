@@ -25,6 +25,13 @@
                 <option value="">None Selected</option>
             </select>
         </div>
+
+        <div class="mb-3">
+            <label for="WorkType" class="form-label">Working Mode:</label>
+            <select asp-for="SelectedWorkTypeId" asp-items="@Model.WorkTypeOptions" class="form-control">
+                <option value="">None Selected</option>
+            </select>
+        </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>

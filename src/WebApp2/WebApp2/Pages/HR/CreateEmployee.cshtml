@@ -34,6 +34,12 @@
         </select>
     </div>
     <div class="mb-3">
+        <label for="WorkType" class="form-label">Working Mode:</label>
+        <select asp-for="WorkTypeID" asp-items="@Model.WorkTypeOptions" class="form-control">
+            <option value="">None Selected</option>
+        </select>
+    </div>
+    <div class="mb-3">
         <label class="form-check-label">
             <input type="checkbox" asp-for="IsMFAChecked" class="form-check-input" /> Is MFA User?
         </label>

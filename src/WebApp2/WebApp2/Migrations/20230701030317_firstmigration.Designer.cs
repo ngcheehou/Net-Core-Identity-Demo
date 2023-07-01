@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace WebApp2.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20230630134341_firstmigration")]
+    [Migration("20230701030317_firstmigration")]
     partial class firstmigration
     {
         /// <inheritdoc />
@@ -34,6 +34,9 @@ namespace WebApp2.Migrations
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("MaxWorkingHours")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
@@ -41,9 +44,6 @@ namespace WebApp2.Migrations
                     b.Property<string>("NormalizedName")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
-
-                    b.Property<double>("TotalSpendOnLunch")
-                        .HasColumnType("float");
 
                     b.HasKey("Id");
 

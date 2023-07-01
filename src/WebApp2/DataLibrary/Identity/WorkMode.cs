@@ -8,9 +8,9 @@ namespace DataLibrary.Identity
 {
     public enum WorkMode
     {
-        Office,
-        WorkFromHome,
-        Hybrid
+        Office = 1,
+        WorkFromHome = 2,
+        Hybrid = 3
 
     }
 }

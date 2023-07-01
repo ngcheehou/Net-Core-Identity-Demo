@@ -36,9 +36,12 @@ namespace WebApp2.Pages.HR
         public InputModel Input { get; set; }
 
         public IList<SelectListItem>? DepartmentOptions { get; set; }
+        public IList<SelectListItem>? WorkTypeOptions { get; set; }
 
         [BindProperty(SupportsGet = true)]
         public string? DepartmentID { get; set; }//user select
+        [BindProperty(SupportsGet = true)]
+        public string? WorkTypeID { get; set; }//user select
 
         public byte[]? ImgData { get; set; }
         public Image QRCodeImage { get; set; }
@@ -69,15 +72,34 @@ namespace WebApp2.Pages.HR
                 Value = r.Id
             }).ToList();
 
+            WorkTypeOptions = Enum.GetValues(typeof(WorkMode))
+                 .Cast<WorkMode>()
+                      .Select(w => new SelectListItem
+                      {
+                          Text = w.ToString(),
+                          Value = ((int)w).ToString()
+                      })
+                 .ToList();
+
+
         }
 
         public async Task<IActionResult> OnPostAsync()
         {
-          
 
             if (ModelState.IsValid)
             {
                 var user = new MyEmployee { UserName = Input.UserName };
+
+                int workModeValue;
+
+                if (int.TryParse(WorkTypeID, out workModeValue))
+                {
+
+                    user.EmployeeWorkMode = (WorkMode)workModeValue;
+                }
+
+
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
 

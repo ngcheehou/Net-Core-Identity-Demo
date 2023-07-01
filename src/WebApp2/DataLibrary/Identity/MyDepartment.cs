@@ -10,7 +10,7 @@ namespace DataLibrary.Identity
 {
     public class MyDepartment : IdentityRole
     {
-        public double TotalSpendOnLunch { get; set; }
+        public int MaxWorkingHours{ get; set; }
         public virtual ICollection<MyEmployeeDepartment>? MyEmployeeDepartment { get; set; }
 
         public virtual ICollection<MyDepartmentClaim>? MyDepartmentClaim { get; set; }

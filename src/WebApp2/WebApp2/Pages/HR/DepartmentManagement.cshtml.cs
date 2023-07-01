@@ -21,10 +21,12 @@ namespace WebApp2.Pages.HR
         [BindProperty]
         public MyDepartment MyDepartment { get; set; }
 
-        public async Task<IActionResult> OnPostAsync()
-        {
+        [BindProperty]
+        public int MaxWorkingHour{ get; set; }
 
-           
+        public async Task<IActionResult> OnPostAsync()
+        {  int maxWorkingHours = MaxWorkingHour;
+
             if (!ModelState.IsValid)
             {
                 return Page();
@@ -44,7 +46,9 @@ namespace WebApp2.Pages.HR
             MyDepartment.Name = this.MyDepartment.NormalizedName;
             MyDepartment.NormalizedName = this.MyDepartment.NormalizedName;
 
-            await _roleManager.CreateAsync(MyDepartment);
+            MyDepartment.MaxWorkingHours = MaxWorkingHour;
+
+           await _roleManager.CreateAsync(MyDepartment);
 
             TempData["Success"] = "true";// ViewData to trigger the update successful modal.
             return RedirectToPage("./DepartmentManagement");
